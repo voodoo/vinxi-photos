@@ -11,7 +11,7 @@ export default eventHandler(async (event) => {
       height: number;
       width: number;
     }[] = [];
-    for (const photo of files.filter((file) => file.endsWith(".jpg"))) {
+    for (const photo of files.filter((file) => file.endsWith(".png"))) {
       const { height, width } = imageSize(`./photos/${photo}`);
       photos.push({ photo, height: height!, width: width! });
     }
